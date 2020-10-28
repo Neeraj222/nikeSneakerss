@@ -23,11 +23,11 @@ public class IntroActivity extends AppCompatActivity {
         for (int i = 0; i<images.length; i++){
             flipperImages(images[i]);
         }
-        login = findViewById(R.id.btnLogin);
+        login = findViewById(R.id.btnIntroLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLoginActivity();
+                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
 
             }
         });
@@ -35,21 +35,12 @@ public class IntroActivity extends AppCompatActivity {
         sign_Up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSingUpActivity();
+                startActivity(new Intent(IntroActivity.this,RegisterActivity.class));
 
             }
         });
     }
 
-    public void openLoginActivity(){
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    public void openSingUpActivity(){
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
-    }
     public void flipperImages(int image){
         ImageView imageView = new ImageView(this);
         imageView.setBackgroundResource(image);
