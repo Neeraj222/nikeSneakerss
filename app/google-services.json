@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "277034859930",
+    "firebase_url": "https://nike-sneakerss.firebaseio.com",
+    "project_id": "nike-sneakerss",
+    "storage_bucket": "nike-sneakerss.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277034859930:android:67d684fbcf4db43ea80e23",
+        "android_client_info": {
+          "package_name": "com.example.nikesneakerss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277034859930-cl6o9vasc343531vgkr1rs51ielcanu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFpp1W2mqJ0YtXjXCjV2GfE1EtYL7IdMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277034859930-cl6o9vasc343531vgkr1rs51ielcanu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
