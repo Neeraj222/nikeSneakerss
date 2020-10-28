@@ -19,9 +19,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText userEmail, userPassword, userFirstName, userLastName;
+    private EditText Email;
+    private EditText Password;
+    private Button Login;
     private FirebaseAuth firebaseAuth;
-    private Button forgotPassword, loginToRegister, singIn;
     private ProgressDialog progressDialog;
 
 
@@ -29,37 +30,26 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        userEmail = (EditText)findViewById(R.id.etLoginEmail);
-        userPassword = (EditText)findViewById(R.id.etLoginPassword);
-        firebaseAuth = FirebaseAuth.getInstance();
+        Email = findViewById(R.id.etLoginEmail);
+        Password = findViewById(R.id.etLoginPassword);
         progressDialog = new ProgressDialog(this);
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-        if(user != null){
-            finish();
-            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-        }
 
-        forgotPassword = (Button) findViewById(R.id.btnLoginForgotPassword);
-        forgotPassword.setOnClickListener(new View.OnClickListener() {
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+//        if(user != null){
+//            finish();
+//            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+//        }
+
+        Login = findViewById(R.id.btnSingIn);
+        Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,ForgotPassword.class));
+                validate(Email.getText().toString(), Password.getText().toString());
             }
         });
-        loginToRegister = (Button) findViewById(R.id.btnSingIn);
-        loginToRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-            }
-        });
-        loginToRegister = (Button) findViewById(R.id.btnLogin2Register);
-        loginToRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            }
-        });
+
+
     }
     private void validate(String userEmail, String userPassword){
         progressDialog.setMessage("Please Wait");
@@ -69,15 +59,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
-                    Toast.makeText(LoginActivity.this, "Welcome To Sneakers", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"Welcome", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
                 }else{
-                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                    progressDialog.dismiss();
+                    Toast.makeText(LoginActivity.this,"Login Failed, Please Try Again", Toast.LENGTH_LONG).show();
                 }
+
 
             }
         });
-
 
     }
 }
