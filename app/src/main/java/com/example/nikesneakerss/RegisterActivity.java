@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail, userPassword, userFirstName, userLastName;
@@ -41,9 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
                     firebaseAuth.createUserWithEmailAndPassword(user_Email, user_Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if(task.isSuccessful()){
-                                Toast.makeText(RegisterActivity.this,"Welcome To The Nike Family", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterActivity.this,DashboardActivity.class));
+                                sendEmailVerification();
                             }else{
                                 Toast.makeText(RegisterActivity.this,"Error Signing Up", Toast.LENGTH_LONG).show();
                             }
@@ -75,6 +77,25 @@ public class RegisterActivity extends AppCompatActivity {
             result = true;
         }
             return result;
+    }
+    private void sendEmailVerification(){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if (firebaseUser !=null){
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()){
+                        Toast.makeText(RegisterActivity.this,"Account Created, Please Check Your Email",Toast.LENGTH_LONG).show();
+                        firebaseAuth.signOut();
+                        finish();
+                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                    }else{
+                        Toast.makeText(RegisterActivity.this,"Error Sending Verification Email",Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
+        }
     }
 
 }
