@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText Password;
     private Button Login;
     private FirebaseAuth firebaseAuth;
+    private Button forgotPassword;
     private ProgressDialog progressDialog;
 
 
@@ -46,6 +47,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validate(Email.getText().toString(), Password.getText().toString());
+            }
+        });
+
+        forgotPassword = findViewById(R.id.btnLoginForgotPassword);
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,ForgotPassword.class));
             }
         });
 

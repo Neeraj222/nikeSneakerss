@@ -39,6 +39,8 @@ public class IntroActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     public void flipperImages(int image){
