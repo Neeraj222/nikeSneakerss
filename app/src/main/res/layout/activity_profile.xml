@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnForgotPassword"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ProfileActivity">
 
     <ImageView
         android:id="@+id/BtnBackground"
@@ -17,7 +16,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/login"
+        android:src="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -25,69 +24,60 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnSingIn"
-        android:layout_width="124dp"
-        android:layout_height="42dp"
-        android:text="SIGN IN"
-        app:backgroundTint="#000000"
+    <EditText
+        android:id="@+id/tvDob"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Date Of Birth"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <EditText
-        android:id="@+id/etLoginEmail"
-        android:layout_width="345dp"
-        android:layout_height="45dp"
+        android:id="@+id/tvEmail"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
         android:ems="10"
-        android:hint="Enter Email"
+        android:hint="Email Address"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.549" />
 
     <EditText
-        android:id="@+id/etLoginPassword"
-        android:layout_width="342dp"
-        android:layout_height="53dp"
+        android:id="@+id/tvLastName"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
         android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
-
-    <Button
-        android:id="@+id/btnLoginForgotPassword"
-        android:layout_width="80dp"
-        android:layout_height="49dp"
-        android:text="Click "
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="@+id/BtnBackground"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click Here"
-        app:backgroundTint="#000000"
+    <EditText
+        android:id="@+id/tvFirstName"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.349" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

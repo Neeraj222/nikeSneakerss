@@ -7,7 +7,7 @@
     tools:context=".RegisterActivity">
 
     <ImageView
-        android:id="@+id/BtnRegisterLogin"
+        android:id="@+id/BtnBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
@@ -19,7 +19,7 @@
         android:src="@drawable/signup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -32,11 +32,25 @@
         android:hint="Last Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
         app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="@+id/BtnRegisterLogin"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.447" />
+
+    <EditText
+        android:id="@+id/tvDateOfBirth"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Date Of Birth"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
 
     <EditText
         android:id="@+id/tvRegisterEmail"
@@ -46,10 +60,11 @@
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.549" />
 
     <EditText
         android:id="@+id/tvRegisterPassword"
@@ -59,9 +74,11 @@
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
 
     <EditText
         android:id="@+id/tvRegisterFirstName"
@@ -71,11 +88,11 @@
         android:hint="First Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnRegisterLogin"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/BtnRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
+        app:layout_constraintVertical_bias="0.349" />
 
     <Button
         android:id="@+id/BtnRegisterJoinUs"
@@ -84,10 +101,10 @@
         android:text="JOIN US"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnRegisterLogin"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/BtnRegisterLogin"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintVertical_bias="0.893" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

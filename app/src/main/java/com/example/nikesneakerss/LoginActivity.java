@@ -37,10 +37,10 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-//        if(user != null){
-//            finish();
-//            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-//        }
+        if(user != null){
+           finish();
+           startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+       }
 
         Login = findViewById(R.id.btnSingIn);
         Login.setOnClickListener(new View.OnClickListener() {

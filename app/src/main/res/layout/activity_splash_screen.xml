@@ -8,7 +8,7 @@
     tools:context=".SplashScreen">
 
     <ImageView
-        android:id="@+id/BtnRegisterLogin"
+        android:id="@+id/BtnBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"

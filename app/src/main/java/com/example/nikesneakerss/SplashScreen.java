@@ -21,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-        image = findViewById(R.id.BtnRegisterLogin);
+        image = findViewById(R.id.BtnBackground);
         image.setAnimation(topAnim);
         image.setAnimation(bottomAnim);
         new Handler().postDelayed(new Runnable() {
