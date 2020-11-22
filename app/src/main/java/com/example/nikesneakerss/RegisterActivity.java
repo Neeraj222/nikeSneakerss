@@ -111,10 +111,17 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserData(){
+        Log.d("register", "Sending user data...");
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(FirstName, LastName, email, DateOfBirth);
-        myRef.setValue(userProfile);
+        myRef.setValue(userProfile).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Log.d("register", "Successfully sent user data");
+            } else {
+                Log.d("register", "Failed to send user data");
+            }
+        });
     }
 
 }

@@ -19,7 +19,7 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
         view_Flipper = findViewById(R.id.viewFlipper);
-        int images[] = {R.drawable.image1, R.drawable.image2, R.drawable.image3};
+        int[] images = {R.drawable.image1, R.drawable.image2, R.drawable.image3};
         for (int i = 0; i<images.length; i++){
             flipperImages(images[i]);
         }
