@@ -3,7 +3,9 @@ package com.example.nikesneakerss;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView LastName;
     private TextView Email;
     private TextView DateOfBirth;
-    private Button btnUpdate;
+    private Button btnUpdate,changePassword;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
 
@@ -32,7 +34,15 @@ public class ProfileActivity extends AppCompatActivity {
         FirstName = (TextView)findViewById(R.id.tvAPN);
         LastName = (TextView) findViewById(R.id.tvALM);
         Email = (TextView) findViewById (R.id.tvAEML);
+        changePassword = findViewById(R.id.btnChangePassword);
         DateOfBirth = (TextView) findViewById(R.id.tvADOB);
+        btnUpdate = findViewById(R.id.btnAccUpdate);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, UpdateProfile.class));
+            }
+        });
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();

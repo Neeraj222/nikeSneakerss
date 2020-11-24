@@ -24,6 +24,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="197dp"
+        android:layout_height="56dp"
+        android:text="Change Password"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="@+id/account"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/account"
+        app:layout_constraintVertical_bias="0.954" />
+
     <TextView
         android:id="@+id/tvADOB"
         android:layout_width="186dp"
@@ -63,10 +76,10 @@
         android:text="First Name"
         app:layout_constraintBottom_toBottomOf="@+id/account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <Button
         android:id="@+id/btnAccUpdate"
@@ -79,6 +92,6 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/account"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="0.849" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
