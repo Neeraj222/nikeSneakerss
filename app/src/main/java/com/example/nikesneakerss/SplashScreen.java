@@ -10,9 +10,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashScreen extends AppCompatActivity {
     Animation topAnim, bottomAnim;
     ImageView image;
+    private FirebaseAuth firebaseAuth;
     private static final int SPLASH_SCREEN = 5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +31,24 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, IntroActivity.class);
-                startActivity(intent);
-                finish();
+                firebaseAuth = FirebaseAuth.getInstance();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user != null) {
+                    Intent intent = new Intent(SplashScreen.this, DashboardActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
 
             }
         },SPLASH_SCREEN);
 
+
+
     }
+
+
 }
