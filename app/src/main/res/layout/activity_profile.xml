@@ -7,7 +7,7 @@
     tools:context=".ProfileActivity">
 
     <ImageView
-        android:id="@+id/BtnBackground"
+        android:id="@+id/account"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
@@ -16,7 +16,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/profile"
+        android:src="@drawable/acc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -24,60 +24,74 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/tvDob"
-        android:layout_width="338dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:hint="Date Of Birth"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="197dp"
+        android:layout_height="56dp"
+        android:text="Change Password"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="@+id/account"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/account"
+        app:layout_constraintVertical_bias="0.954" />
 
-    <EditText
-        android:id="@+id/tvEmail"
-        android:layout_width="338dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.458"
+    <TextView
+        android:id="@+id/tvADOB"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="188dp"
+        android:text="Date of Birth"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAEML"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="284dp"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvALM"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:text="Last Name"
+        app:layout_constraintBottom_toTopOf="@+id/tvAEML"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAPN" />
+
+    <TextView
+        android:id="@+id/tvAPN"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:text="First Name"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
+        app:layout_constraintVertical_bias="0.319" />
 
-    <EditText
-        android:id="@+id/tvLastName"
-        android:layout_width="338dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
-
-    <EditText
-        android:id="@+id/tvFirstName"
-        android:layout_width="338dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/BtnBackground"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="@+id/BtnBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+    <Button
+        android:id="@+id/btnAccUpdate"
+        android:layout_width="197dp"
+        android:layout_height="56dp"
+        android:text="Update"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/account"
+        app:layout_constraintEnd_toEndOf="@+id/account"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/account"
+        app:layout_constraintVertical_bias="0.849" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
